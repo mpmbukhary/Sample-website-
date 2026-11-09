@@ -1,0 +1,589 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Websites | Clean & Affordable Web Design (9961010333)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        whatsapp: '#25D366',
+                        whatsappDark: '#1da851',
+                        brandBlue: '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth fade-in animation for tab switching */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.35s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Subtle pulse for floating WhatsApp button */
+        @keyframes pulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wa-pulse {
+            animation: pulseRing 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- STICKY TOP DEMO BANNER -->
+    <div class="sticky top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white px-3 py-2.5 shadow-md text-center text-xs sm:text-sm font-medium">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-2">
+            <span>👋 <strong>Welcome!</strong> This page itself is a live sample of the clean, fast websites I build. Need one?</span>
+            <a href="https://wa.me/919961010333?text=Hi,%20I%20saw%20your%20sample%20website%20and%20want%20to%20make%20a%20simple%20website." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-whatsapp hover:bg-whatsappDark text-white font-bold px-3 py-1 rounded-full text-xs transition shadow-sm">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Call/WhatsApp: 9961010333
+            </a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white text-lg shadow-sm">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-lg text-slate-900 block leading-none">SimpleWeb</span>
+                    <span class="text-xs text-slate-500">Clean & Fast Websites</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="#demos" class="text-xs sm:text-sm font-semibold text-slate-600 hover:text-blue-600 px-2 py-1.5 transition">
+                    Live Samples
+                </a>
+                <a href="tel:+919961010333" class="inline-flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold text-xs sm:text-sm px-3.5 py-2 rounded-xl transition">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>9961010333</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden py-10 sm:py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Small Tag -->
+            <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
+                <i class="fa-solid fa-bolt text-amber-500"></i> Fast Delivery • Mobile Friendly • Pocket-Friendly Rates
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-heading font-extrabold text-2xl sm:text-4xl md:text-5xl text-slate-900 leading-tight mb-4">
+                Simple, Clean & Affordable Websites for <span class="text-blue-600">Small Businesses & Individuals</span>
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
+                Get your shop, service, or portfolio online fast. Mobile-friendly, easy to share on WhatsApp & Google Maps, and pocket-friendly.
+            </p>
+
+            <!-- Clear Scope Notice Badge -->
+            <div class="max-w-2xl mx-auto bg-amber-50 border border-amber-200/90 rounded-2xl p-4 mb-8 text-left sm:text-center shadow-sm">
+                <p class="text-xs sm:text-sm text-amber-900 leading-relaxed">
+                    <i class="fa-solid fa-circle-info text-amber-600 mr-1.5"></i>
+                    <strong>Note:</strong> I specialize strictly in <strong>simple, fast static informational websites (1 to 3 pages)</strong>. I do not undertake complex e-commerce, databases, or heavy web apps.
+                </p>
+            </div>
+
+            <!-- Primary CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-md sm:max-w-none mx-auto">
+                <a href="https://wa.me/919961010333?text=Hi!%20I%20saw%20your%20sample%20website%20and%20I%20want%20to%20make%20a%20simple%20website." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-whatsapp hover:bg-whatsappDark text-white font-bold text-base px-7 py-4 rounded-2xl shadow-lg shadow-green-500/20 transform hover:-translate-y-0.5 transition">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Chat on WhatsApp (9961010333)</span>
+                </a>
+                <a href="tel:+919961010333" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-base px-7 py-4 rounded-2xl shadow-lg shadow-blue-600/20 transform hover:-translate-y-0.5 transition">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                    <span>Tap to Call Now</span>
+                </a>
+            </div>
+
+            <!-- Quick Benefits Row -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-6 max-w-lg mx-auto mt-10 pt-8 border-t border-slate-200/80 text-center">
+                <div>
+                    <div class="text-blue-600 font-bold text-lg sm:text-xl"><i class="fa-solid fa-mobile-screen-button mr-1"></i> 100%</div>
+                    <div class="text-xs text-slate-500">Mobile Ready</div>
+                </div>
+                <div>
+                    <div class="text-whatsappDark font-bold text-lg sm:text-xl"><i class="fa-brands fa-whatsapp mr-1"></i> Direct</div>
+                    <div class="text-xs text-slate-500">WhatsApp Orders</div>
+                </div>
+                <div>
+                    <div class="text-blue-600 font-bold text-lg sm:text-xl"><i class="fa-solid fa-indian-rupee-sign mr-1"></i> Low</div>
+                    <div class="text-xs text-slate-500">Budget Friendly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE LIVE SAMPLE SWITCHER (TABBED DEMO SECTION) -->
+    <section id="demos" class="py-10 sm:py-14 px-4 bg-slate-100/80 border-y border-slate-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100 px-3 py-1 rounded-full">Interactive Live Preview</span>
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mt-3">
+                    Click Below to See 3 Sample Website Styles
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                    Tap any tab below to preview how your shop, tuition center, or visiting card website will look!
+                </p>
+            </div>
+
+            <!-- 3 Interactive Tab Buttons -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-6 bg-white p-2 rounded-2xl shadow-sm border border-slate-200">
+                <button onclick="switchDemoTab('bakery')" id="tab-btn-bakery" class="demo-tab-btn flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl font-bold text-sm transition bg-blue-600 text-white shadow-sm">
+                    <i class="fa-solid fa-cake-candles text-base"></i>
+                    <span>1. Shop / Bakery Demo</span>
+                </button>
+                <button onclick="switchDemoTab('clinic')" id="tab-btn-clinic" class="demo-tab-btn flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl font-bold text-sm transition text-slate-600 hover:bg-slate-100">
+                    <i class="fa-solid fa-graduation-cap text-base"></i>
+                    <span>2. Tuition / Clinic Demo</span>
+                </button>
+                <button onclick="switchDemoTab('card')" id="tab-btn-card" class="demo-tab-btn flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl font-bold text-sm transition text-slate-600 hover:bg-slate-100">
+                    <i class="fa-solid fa-id-card text-base"></i>
+                    <span>3. Digital Visiting Card</span>
+                </button>
+            </div>
+
+            <!-- Mock Browser Window Frame -->
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <!-- Browser Top Bar -->
+                <div class="bg-slate-800 text-slate-300 px-4 py-3 flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                    </div>
+                    <div class="bg-slate-700/90 text-slate-200 px-3 py-1 rounded-lg flex items-center gap-2 truncate max-w-[220px] sm:max-w-md">
+                        <i class="fa-solid fa-lock text-emerald-400 text-[10px]"></i>
+                        <span id="browser-url">your-business-name.netlify.app</span>
+                    </div>
+                    <div class="text-[11px] text-amber-300 font-semibold hidden sm:block">
+                        SAMPLE PREVIEW
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     TAB 1: LOCAL SHOP / BAKERY DEMO
+                     ========================================== -->
+                <div id="tab-bakery" class="tab-content active">
+                    <!-- Bakery Hero Banner -->
+                    <div class="relative bg-gradient-to-r from-amber-800 via-orange-700 to-amber-800 text-white p-6 sm:p-10">
+                        <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div class="text-center sm:text-left">
+                                <span class="bg-amber-400 text-amber-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Freshly Baked Daily</span>
+                                <h3 class="font-heading font-bold text-2xl sm:text-4xl mt-3">Royal Bakes & Cafe</h3>
+                                <p class="text-amber-100 text-sm sm:text-base mt-1.5">Custom Birthday Cakes, Fresh Pastries, Snacks & Home Delivery</p>
+                                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4 text-xs sm:text-sm text-amber-100">
+                                    <span><i class="fa-regular fa-clock mr-1"></i> Open: 8:30 AM – 9:30 PM</span>
+                                    <span>•</span>
+                                    <span><i class="fa-solid fa-location-dot mr-1"></i> Main Road, Town Center</span>
+                                </div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20 text-center shrink-0">
+                                <div class="text-3xl mb-1">🎂 ☕ 🥐</div>
+                                <div class="text-xs font-semibold text-amber-200">100% Fresh Items</div>
+                                <div class="text-[11px] text-white/80">Pre-book on WhatsApp</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Today's Menu & Price Cards -->
+                    <div class="p-5 sm:p-8 bg-orange-50/40">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-heading font-bold text-lg sm:text-xl text-slate-900">
+                                <i class="fa-solid fa-utensils text-orange-600 mr-1.5"></i> Today's Specials & Menu
+                            </h4>
+                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-lg">Accepting Orders</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                            <!-- Item 1 -->
+                            <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-2xl">🍫</span>
+                                        <span class="bg-orange-100 text-orange-800 font-bold text-sm px-2.5 py-0.5 rounded-lg">₹450 / ½ Kg</span>
+                                    </div>
+                                    <h5 class="font-bold text-slate-900 mt-2">Chocolate Truffle Cake</h5>
+                                    <p class="text-xs text-slate-500 mt-1">Rich Belgian chocolate layers with free birthday name writing.</p>
+                                </div>
+                                <button onclick="sendSampleOrder('Royal Bakes Demo - Chocolate Truffle Cake (₹450)')" class="mt-4 w-full bg-orange-50 hover:bg-orange-100 text-orange-700 font-semibold text-xs py-2 rounded-xl transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i> Quick Order This
+                                </button>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-2xl">🥟</span>
+                                        <span class="bg-orange-100 text-orange-800 font-bold text-sm px-2.5 py-0.5 rounded-lg">₹120 / Box</span>
+                                    </div>
+                                    <h5 class="font-bold text-slate-900 mt-2">Hot Evening Snacks Box</h5>
+                                    <p class="text-xs text-slate-500 mt-1">Assorted pack of 6 fresh puffs, samosas & cutlets for family tea time.</p>
+                                </div>
+                                <button onclick="sendSampleOrder('Royal Bakes Demo - Hot Evening Snacks Box (₹120)')" class="mt-4 w-full bg-orange-50 hover:bg-orange-100 text-orange-700 font-semibold text-xs py-2 rounded-xl transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i> Quick Order This
+                                </button>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-2xl">🍓</span>
+                                        <span class="bg-orange-100 text-orange-800 font-bold text-sm px-2.5 py-0.5 rounded-lg">₹550 / ½ Kg</span>
+                                    </div>
+                                    <h5 class="font-bold text-slate-900 mt-2">Red Velvet Cream Cake</h5>
+                                    <p class="text-xs text-slate-500 mt-1">Soft sponge with classic cream cheese frosting, ready in 1 hour.</p>
+                                </div>
+                                <button onclick="sendSampleOrder('Royal Bakes Demo - Red Velvet Cake (₹550)')" class="mt-4 w-full bg-orange-50 hover:bg-orange-100 text-orange-700 font-semibold text-xs py-2 rounded-xl transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i> Quick Order This
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Bakery Action Footer -->
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center gap-3 text-center sm:text-left">
+                                <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-map-location-dot text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-sm text-slate-900">Visit Our Shop or Order on WhatsApp</div>
+                                    <div class="text-xs text-slate-500">Want a website like this for your shop or bakery? Contact 9961010333</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2.5 w-full sm:w-auto">
+                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs px-4 py-3 rounded-xl transition">
+                                    <i class="fa-solid fa-location-arrow text-blue-600"></i> Google Map
+                                </a>
+                                <button onclick="sendSampleOrder('I liked the Bakery/Shop Sample Website and want to make a similar one for my business!')" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-whatsapp hover:bg-whatsappDark text-white font-bold text-xs px-4 py-3 rounded-xl transition shadow-sm">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     TAB 2: CLINIC / TUITION / SERVICE DEMO
+                     ========================================== -->
+                <div id="tab-clinic" class="tab-content">
+                    <!-- Service Hero -->
+                    <div class="bg-gradient-to-r from-teal-800 via-emerald-700 to-teal-800 text-white p-6 sm:p-10">
+                        <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div class="text-center sm:text-left">
+                                <span class="bg-teal-300 text-teal-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Admissions & Bookings Open</span>
+                                <h3 class="font-heading font-bold text-2xl sm:text-4xl mt-3">Bright Future Tuition & Care Center</h3>
+                                <p class="text-teal-100 text-sm sm:text-base mt-1.5">Focused Coaching for Classes 5 to 12 • Experienced Teachers • Individual Attention</p>
+                                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4 text-xs sm:text-sm text-teal-100">
+                                    <span><i class="fa-regular fa-calendar-check mr-1"></i> Mon – Sat: 4:00 PM – 8:30 PM</span>
+                                    <span>•</span>
+                                    <span><i class="fa-solid fa-phone mr-1"></i> Direct Enquiry: 9961010333</span>
+                                </div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20 text-center shrink-0">
+                                <div class="text-2xl font-bold text-amber-300">⭐ 4.9 / 5</div>
+                                <div class="text-xs text-white font-medium mt-1">Trusted by Parents</div>
+                                <div class="text-[11px] text-teal-200">Online & Offline Batches</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-8 bg-teal-50/30">
+                        <!-- Courses / Services Offered -->
+                        <h4 class="font-heading font-bold text-lg text-slate-900 mb-3">
+                            <i class="fa-solid fa-book-open-reader text-teal-600 mr-1.5"></i> Courses & Services Offered
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-white p-4 rounded-2xl border border-teal-100 shadow-sm">
+                                <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold mb-2.5">
+                                    <i class="fa-solid fa-calculator"></i>
+                                </div>
+                                <h5 class="font-bold text-slate-900">Class 8 to 10 (Maths & Science)</h5>
+                                <p class="text-xs text-slate-500 mt-1">State & CBSE syllabus with weekly chapter tests and revision notes.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl border border-teal-100 shadow-sm">
+                                <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold mb-2.5">
+                                    <i class="fa-solid fa-microscope"></i>
+                                </div>
+                                <h5 class="font-bold text-slate-900">+1 & +2 Science / Commerce</h5>
+                                <p class="text-xs text-slate-500 mt-1">Special board exam preparation batches with doubt-clearing sessions.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl border border-teal-100 shadow-sm">
+                                <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold mb-2.5">
+                                    <i class="fa-solid fa-language"></i>
+                                </div>
+                                <h5 class="font-bold text-slate-900">Spoken English & Foundation</h5>
+                                <p class="text-xs text-slate-500 mt-1">Weekend grammar, reading, and confidence-building classes for kids.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 Why Choose Us Points -->
+                        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 mb-6">
+                            <h5 class="font-bold text-sm text-slate-900 mb-3">Why Choose Us?</h5>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-emerald-500"></i> Small Batch Size (Max 15)
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-emerald-500"></i> Regular Parent Updates on WhatsApp
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-emerald-500"></i> Affordable Monthly Fees
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Bar -->
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-teal-900 text-white p-4 rounded-2xl">
+                            <div class="text-xs sm:text-sm text-center sm:text-left">
+                                <strong>Need a website like this for your Tuition Center, Clinic, or Consultancy?</strong>
+                            </div>
+                            <button onclick="sendSampleOrder('I liked the Tuition/Clinic Sample Website and want to build a similar website!')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsappDark text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition shrink-0">
+                                <i class="fa-brands fa-whatsapp text-base"></i> Book Appointment via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     TAB 3: DIGITAL VISITING CARD DEMO
+                     ========================================== -->
+                <div id="tab-card" class="tab-content">
+                    <div class="p-6 sm:p-10 bg-gradient-to-b from-slate-100 to-slate-200 flex justify-center">
+                        <!-- Sleek Mobile Card Container -->
+                        <div class="w-full max-w-sm bg-white rounded-3xl shadow-lg border border-slate-200/90 overflow-hidden">
+                            <!-- Card Header Cover -->
+                            <div class="h-24 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 relative">
+                                <span class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                    Digital Card Demo
+                                </span>
+                            </div>
+
+                            <!-- Profile Badge -->
+                            <div class="px-6 pb-6 text-center relative">
+                                <div class="w-20 h-20 rounded-2xl bg-white p-1.5 shadow-md mx-auto -mt-10 mb-3">
+                                    <div class="w-full h-full rounded-xl bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
+                                        <i class="fa-solid fa-camera-retro"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-heading font-bold text-xl text-slate-900">Arjun Studio & Events</h3>
+                                <p class="text-xs font-medium text-blue-600 mt-0.5">Wedding Photography • Designing • Printing</p>
+                                <p class="text-xs text-slate-500 mt-2">
+                                    All your contact links, location, and work photos in one sleek mobile page!
+                                </p>
+
+                                <!-- Quick-Action Buttons -->
+                                <div class="grid grid-cols-3 gap-2.5 my-5">
+                                    <a href="tel:+919961010333" class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold text-xs transition">
+                                        <i class="fa-solid fa-phone text-base mb-1"></i>
+                                        Call
+                                    </a>
+                                    <button onclick="sendSampleOrder('I liked the Digital Visiting Card Sample and want to make one for myself!')" class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs transition">
+                                        <i class="fa-brands fa-whatsapp text-base mb-1"></i>
+                                        WhatsApp
+                                    </button>
+                                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-amber-700 font-semibold text-xs transition">
+                                        <i class="fa-solid fa-location-dot text-base mb-1"></i>
+                                        Location
+                                    </a>
+                                </div>
+
+                                <!-- 4-Photo Work Gallery Grid -->
+                                <div class="text-left mb-5">
+                                    <div class="text-xs font-bold text-slate-700 mb-2 flex items-center justify-between">
+                                        <span>Recent Work Gallery</span>
+                                        <span class="text-[11px] text-blue-600">4 Photos</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div class="h-20 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-50 border border-blue-100 flex flex-col items-center justify-center text-blue-700">
+                                            <i class="fa-solid fa-heart text-lg mb-1 text-rose-500"></i>
+                                            <span class="text-[11px] font-semibold">Wedding Shoot</span>
+                                        </div>
+                                        <div class="h-20 rounded-xl bg-gradient-to-br from-amber-100 to-orange-50 border border-amber-100 flex flex-col items-center justify-center text-amber-800">
+                                            <i class="fa-solid fa-cake-candles text-lg mb-1 text-amber-600"></i>
+                                            <span class="text-[11px] font-semibold">Birthday Events</span>
+                                        </div>
+                                        <div class="h-20 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-50 border border-emerald-100 flex flex-col items-center justify-center text-emerald-800">
+                                            <i class="fa-solid fa-print text-lg mb-1 text-emerald-600"></i>
+                                            <span class="text-[11px] font-semibold">Album Design</span>
+                                        </div>
+                                        <div class="h-20 rounded-xl bg-gradient-to-br from-purple-100 to-pink-50 border border-purple-100 flex flex-col items-center justify-center text-purple-800">
+                                            <i class="fa-solid fa-frame text-lg mb-1 text-purple-600"></i>
+                                            <span class="text-[11px] font-semibold">Photo Frames</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="sendSampleOrder('Hi! I want a Digital Visiting Card website like the sample on your page.')" class="w-full bg-whatsapp hover:bg-whatsappDark text-white font-bold text-xs py-3.5 rounded-xl shadow-sm transition flex items-center justify-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-base"></i> Get a Digital Card Like This
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INQUIRY BOX (WHATSAPP FORM BACKEND) -->
+    <section id="contact" class="py-12 sm:py-16 px-4">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-lg border border-slate-200 p-6 sm:p-8">
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-green-100 text-whatsappDark flex items-center justify-center text-2xl mx-auto mb-3">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h2 class="font-heading font-bold text-2xl text-slate-900">Want a Simple Website?</h2>
+                <p class="text-slate-600 text-sm mt-1">
+                    Fill in your details below — it will open directly in WhatsApp so we can chat!
+                </p>
+            </div>
+
+            <form id="whatsappInquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label for="visitorName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Your Name *</label>
+                    <input type="text" id="visitorName" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none text-sm transition">
+                </div>
+
+                <div>
+                    <label for="businessType" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Website Type Needed *</label>
+                    <select id="businessType" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none text-sm bg-white transition">
+                        <option value="Shop / Bakery Website">Shop / Bakery Website</option>
+                        <option value="Service / Tuition / Clinic Website">Service / Tuition / Clinic Website</option>
+                        <option value="Digital Visiting Card / Personal Portfolio">Digital Visiting Card / Personal Portfolio</option>
+                        <option value="Other Simple Website">Other Simple Website</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="visitorMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Your Requirement / Message</label>
+                    <textarea id="visitorMessage" rows="3" placeholder="E.g., I need a 1-page website for my shop with photos and location..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none text-sm transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-whatsapp hover:bg-whatsappDark text-white font-bold text-base py-4 rounded-2xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Send Inquiry via WhatsApp</span>
+                </button>
+            </form>
+
+            <div class="mt-6 pt-5 border-t border-slate-100 text-center">
+                <p class="text-xs text-slate-500">
+                    Or call/WhatsApp directly at: <a href="tel:+919961010333" class="font-bold text-blue-600 hover:underline">9961010333</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 px-4 text-center text-xs sm:text-sm">
+        <div class="max-w-4xl mx-auto space-y-2">
+            <p class="font-heading font-bold text-white text-base">
+                Simple Websites | Contact & WhatsApp: 9961010333
+            </p>
+            <p class="text-slate-400 text-xs">
+                Clean, Fast & Mobile-Friendly Static Websites (1–3 Pages) for Small Businesses & Individuals.
+            </p>
+            <div class="pt-3 flex items-center justify-center gap-4 text-xs">
+                <a href="https://wa.me/919961010333" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp: 9961010333
+                </a>
+                <span>•</span>
+                <a href="tel:+919961010333" class="text-blue-400 hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> Call: 9961010333
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP ACTION BUTTON -->
+    <a href="https://wa.me/919961010333?text=Hi!%20I%20saw%20your%20sample%20website%20and%20want%20to%20enquire%20about%20making%20a%20simple%20website." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-whatsapp hover:bg-whatsappDark text-white flex items-center justify-center text-3xl shadow-xl wa-pulse transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- VANILLA JAVASCRIPT FOR TABS & WHATSAPP SERVERLESS BACKEND -->
+    <script>
+        const PHONE_NUMBER = "919961010333";
+
+        // Switch between the 3 Live Demo Tabs
+        function switchDemoTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Reset all tab buttons styling
+            document.querySelectorAll('.demo-tab-btn').forEach(btn => {
+                btn.className = "demo-tab-btn flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl font-bold text-sm transition text-slate-600 hover:bg-slate-100";
+            });
+
+            // Activate selected tab content & button
+            document.getElementById('tab-' + tabName).classList.add('active');
+            const activeBtn = document.getElementById('tab-btn-' + tabName);
+            activeBtn.className = "demo-tab-btn flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl font-bold text-sm transition bg-blue-600 text-white shadow-sm";
+
+            // Update Mock Browser URL bar for realism
+            const urlMap = {
+                bakery: "royal-bakes-shop.netlify.app",
+                clinic: "bright-future-tuition.netlify.app",
+                card: "arjun-digital-card.netlify.app"
+            };
+            document.getElementById('browser-url').textContent = urlMap[tabName] || "sample-website.netlify.app";
+        }
+
+        // Open WhatsApp with pre-filled text when clicking sample buttons
+        function sendSampleOrder(itemText) {
+            const text = `Hi! ${itemText} (Contacting from your Sample Demo Hub)`;
+            const waUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(text)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        // Handle Quick Inquiry Form submission -> Opens WhatsApp directly
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('visitorName').value.trim();
+            const businessType = document.getElementById('businessType').value;
+            const message = document.getElementById('visitorMessage').value.trim();
+
+            let fullMessage = `Hello! I want to make a simple website.\n\n*Name:* ${name}\n*Type:* ${businessType}`;
+            if (message) {
+                fullMessage += `\n*Details:* ${message}`;
+            }
+
+            const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(fullMessage)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
+```
